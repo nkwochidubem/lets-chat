@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   backend:
-    image: lets-chat-backend
+    image: index.docker.io/nkwochidubem/lets-chat-backend
     container_name: lets-chat-backend
     environment:
       - MONGO_URI=mongodb://mongodb:27017
@@ -25,7 +25,7 @@ services:
       - test
 
   frontend:
-    image: lets-chat-frontend
+    image: index.docker.io/nkwochidubem/lets-chat-frontend
     container_name: lets-chat-frontend
     env_file:
       - .env
