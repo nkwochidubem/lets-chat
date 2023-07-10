@@ -9,4 +9,4 @@ package-lock.json
 server/config/serviceAccountKey.json
 
 ## Env file
-.env
+#.env
