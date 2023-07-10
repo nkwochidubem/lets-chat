@@ -4,14 +4,14 @@ ENV CI=true
 ENV PORT=3000
 
 WORKDIR /code
-COPY package.json /code/package.json
-COPY yarn.lock /code/yarn.lock
+COPY frontend/package.json /code/package.json
+COPY frontend/yarn.lock /code/yarn.lock
 
 #RUN npm i -g yarn@latest
 
 RUN yarn install --production
 
-COPY . /code
+COPY frontend/. /code
 
 CMD [ "npm", "start" ]
 
