@@ -56,7 +56,7 @@ pipeline {
       }
       steps {
         sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
-        sh 'docker compose -f docker-compose-local.yml up -d --no-color --wait'
+        sh 'docker compose docker-compose.yml up -d --no-color --wait'
       }
     }
 
