@@ -1,5 +1,6 @@
 {
-  "name": "frontend",
+ "proxy": "http://lets-chat-backend:5001", 
+ "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
