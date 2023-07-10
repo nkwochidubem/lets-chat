@@ -56,7 +56,7 @@ pipeline {
       }
       steps {
         sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
-        sh 'docker compose up -d --no-color --wait'
+        sh 'docker compose --context "client1" up -d --no-color --wait'
       }
     }
 
