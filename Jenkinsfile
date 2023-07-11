@@ -29,8 +29,8 @@ pipeline {
 
     stage('Log into Dockerhub') {
       environment {
-        DOCKERHUB_USER = 'nkwochidubem'
-        DOCKERHUB_PASSWORD = 'icui4cu5517'
+        DOCKERHUB_USER = '***'
+        DOCKERHUB_PASSWORD = '***'
       }
       steps {
         sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
@@ -50,12 +50,7 @@ pipeline {
     }
 
     stage('Deploy') {
-      environment {
-        DOCKERHUB_USER = 'nkwochidubem'
-        DOCKERHUB_PASSWORD = 'icui4cu5517'
-      }
       steps {
-        sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
         sh 'docker compose up -d --no-color --wait'
       }
     }
